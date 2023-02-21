@@ -42,8 +42,8 @@ export default function App({ Component, pageProps }) {
         {...pageProps}
         pieces={pieces}
         onToggleFavorite={handleToggleFavorite}
-      <Layout />
       />
+      <Layout />
     </>
   );
 }
