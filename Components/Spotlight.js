@@ -1,8 +1,8 @@
 import Image from "next/image";
 
 export default function Spotlight({ name, artist, imageSource }) {
- console.log(imageSource)
-    return (
+  console.log(imageSource);
+  return (
     <>
       <h1>Piece of the Day</h1>
       <Image
