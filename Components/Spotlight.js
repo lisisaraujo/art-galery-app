@@ -1,10 +1,18 @@
+import Image from "next/image";
+
 export default function Spotlight({ name, artist, imageSource }) {
-  return (
+ console.log(imageSource)
+    return (
     <>
       <h1>Piece of the Day</h1>
-      <img src={imageSource} alt="image of the day" />
+      <Image
+        src={imageSource}
+        alt="image of the day"
+        width={200}
+        height={200}
+      />
       <p>
-        "{name}" by {artist}
+        {name} by {artist}
       </p>
     </>
   );
