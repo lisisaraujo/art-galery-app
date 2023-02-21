@@ -9,7 +9,7 @@ export default function ArtPieces({ pieces }) {
         {pieces.map((piece) => {
           return (
             <li className="art-list-item" key={piece.slug}>
-              Title: {piece.name}
+              Title: {piece.name} {"\n"}
               Artist: {piece.artist}
             </li>
           );
