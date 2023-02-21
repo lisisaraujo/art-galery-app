@@ -6,6 +6,7 @@ export default function App({ Component, pageProps }) {
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
   const { data, error, isLoading } = useSWR(URL, fetcher);
   const pieces = data;
+
   console.log(pieces);
 
   return (
