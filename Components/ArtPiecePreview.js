@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+
 import FavoriteButton from "./FavoriteButton";
 
 export default function ArtPiecePreview({
@@ -8,8 +10,9 @@ export default function ArtPiecePreview({
   slug,
   onToggleFavorite,
 }) {
+
   return (
-    <>
+    <Link href={`pieces/${slug}`} >
       <div className="art-list-item">
         <Image
           src={imageSource}
@@ -22,6 +25,6 @@ export default function ArtPiecePreview({
         </p>
         <FavoriteButton slug={slug} onToggleFavorite={onToggleFavorite} />
       </div>
-    </>
+    </Link >
   );
 }

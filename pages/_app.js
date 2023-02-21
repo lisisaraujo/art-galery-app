@@ -2,6 +2,9 @@ import GlobalStyle from "../styles";
 import useSWR from "swr";
 import { useEffect, useState } from "react";
 import { useImmer } from "use-immer";
+import ArtPieces from "./pieces";
+import Layout from "../Components/Layout";
+
 
 export default function App({ Component, pageProps }) {
   const [artPiecesInfo, updateArtPiecesInfo] = useImmer([]);
@@ -39,6 +42,7 @@ export default function App({ Component, pageProps }) {
         {...pageProps}
         pieces={pieces}
         onToggleFavorite={handleToggleFavorite}
+      <Layout />
       />
     </>
   );
