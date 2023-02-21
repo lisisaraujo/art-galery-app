@@ -12,6 +12,7 @@ export default function ArtPieces({ pieces }) {
         return (
           <ArtPiecePreview
             key={piece.slug}
+            slug={piece.slug}
             name={piece.name}
             imageSource={piece.imageSource}
             artist={piece.artist}
