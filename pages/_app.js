@@ -11,6 +11,7 @@ export default function App({ Component, pageProps }) {
   if (isLoading) return <div>loading...</div>;
 
   const pieces = data;
+
   console.log(pieces);
 
   return (
