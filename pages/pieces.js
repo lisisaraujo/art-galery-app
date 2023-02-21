@@ -1,17 +1,20 @@
 export default function ArtPieces({ pieces }) {
-  const piecesArr = pieces.map((piece) => piece.name);
-  console.log(piecesArr);
+  // const piecesArr = pieces.map((piece) => piece);
+  console.log("peices array", pieces);
 
   return (
     <>
-      {/* <ul className="art-list">
+      <h1>Pieces</h1>
+      <ul className="art-list">
         {pieces.map((piece) => {
-          <li className="art-list-item">
-            Title: {piece.name}
-            Artist: {piece.artist}
-          </li>;
+          return (
+            <li className="art-list-item" key={piece.slug}>
+              Title: {piece.name} {"\n"}
+              Artist: {piece.artist}
+            </li>
+          );
         })}
-      </ul> */}
+      </ul>
     </>
   );
 }
