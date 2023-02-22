@@ -20,7 +20,8 @@
     "react-router-dom": "^6.8.1",
     "styled-components": "^5.3.6",
     "swr": "^2.0.3",
-    "use-immer": "^0.8.1"
+    "use-immer": "^0.8.1",
+    "use-local-storage": "^2.3.6"
   },
   "devDependencies": {
     "@svgr/webpack": "^6.5.1",
