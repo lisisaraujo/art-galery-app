@@ -5,7 +5,7 @@ import { useImmer } from "use-immer";
 import ArtPieces from "./pieces";
 import Layout from "../Components/Layout";
 import { useImmerLocalStorageState } from "./useImmerLocalStorageState";
-
+import './indexStyle.css'
 // ...
 
 export default function App({ Component, pageProps }) {

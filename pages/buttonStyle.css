@@ -1,0 +1,8 @@
+.favButton {
+  padding: 10px 20px;
+  background-color: rgb(134, 134, 134);
+  font-size: 1rem;
+  margin: 20px;
+  border-radius: 5px;
+  border: none;
+}
