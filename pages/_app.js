@@ -7,6 +7,7 @@ import Layout from "../Components/Layout";
 
 export default function App({ Component, pageProps }) {
   const [artPiecesInfo, updateArtPiecesInfo] = useImmer([]);
+  // const [favorites, setFavorites] = useState([]);
 
   const URL = "https://example-apis.vercel.app/api/art";
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
@@ -21,19 +22,17 @@ export default function App({ Component, pageProps }) {
     updateArtPiecesInfo((draft) => {
       const artPiece = draft.find((piece) => piece.slug === slug);
       if (!artPiece) {
-        return [
-          ...draft,
-          {
-            slug,
-            isFavorite: true,
-          },
-        ];
+        draft.push({
+          slug,
+          isFavorite: true,
+        });
       } else {
         artPiece.isFavorite = !artPiece.isFavorite;
+        // return draft;
       }
     });
   }
-  console.log("++++++++++", artPiecesInfo);
+
   return (
     <>
       <GlobalStyle />
@@ -41,6 +40,7 @@ export default function App({ Component, pageProps }) {
         {...pageProps}
         pieces={pieces}
         onToggleFavorite={handleToggleFavorite}
+        artPiecesInfo={artPiecesInfo}
       />
       <Layout />
     </>

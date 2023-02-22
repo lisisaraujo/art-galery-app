@@ -1,11 +1,21 @@
 import ArtPiecePreview from "../Components/ArtPiecePreview";
 
-export default function FavoriteArtPieces({ pieces, onToggleFavorite }) {
+export default function FavoriteArtPieces({
+  pieces,
+  onToggleFavorite,
+  artPiecesInfo,
+}) {
+  const favorites = pieces.filter((piece) => {
+    return artPiecesInfo.find(
+      (info) => info.slug === piece.slug && info.isFavorite
+    );
+  });
+
   return (
     <>
       <h1>Favorites</h1>
 
-      {pieces.map((piece) => {
+      {favorites.map((piece) => {
         return (
           <ArtPiecePreview
             key={piece.slug}
@@ -14,6 +24,7 @@ export default function FavoriteArtPieces({ pieces, onToggleFavorite }) {
             name={piece.name}
             imageSource={piece.imageSource}
             artist={piece.artist}
+            favorites={favorites}
           />
         );
       })}
