@@ -5,7 +5,7 @@ export default function ArtPieces({ pieces, onToggleFavorite }) {
   console.log("peices array", pieces);
 
   return (
-    <>
+    <div className="centeredcontant">
       <h1>Pieces of Art</h1>
 
       {pieces.map((piece) => {
@@ -20,6 +20,6 @@ export default function ArtPieces({ pieces, onToggleFavorite }) {
           />
         );
       })}
-    </>
+    </div>
   );
 }

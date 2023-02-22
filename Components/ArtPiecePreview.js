@@ -11,14 +11,14 @@ export default function ArtPiecePreview({
   onToggleFavorite,
 }) {
   return (
-    <>
+    <div className="card">
       <Link href={`pieces/${slug}`}>
         <div className="art-list-item">
           <Image
             src={imageSource}
             alt="image of the day"
             width={400}
-            height={200}
+            height={400}
           />
           <p>
             &quot;{name}&quot; by {artist}
@@ -26,6 +26,6 @@ export default function ArtPiecePreview({
         </div>
       </Link>
       <FavoriteButton slug={slug} onToggleFavorite={onToggleFavorite} />
-    </>
+    </div>
   );
 }

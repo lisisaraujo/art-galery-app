@@ -1,0 +1,15 @@
+@import "navStyle.css";
+@import "buttonStyle.css";
+@import "artPiecePreviewStyle.css";
+
+* {
+  color: white;
+  font-family: ;
+  text-decoration: none;
+}
+
+body {
+  text-align: center;
+  background-color: rgb(35, 35, 35);
+  padding-bottom: 52px;
+}
