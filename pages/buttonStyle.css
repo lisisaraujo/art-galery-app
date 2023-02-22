@@ -1,8 +1,32 @@
 .favButton {
-  padding: 10px 20px;
-  background-color: rgb(134, 134, 134);
+  background-color: transparent;
   font-size: 1rem;
   margin: 20px;
   border-radius: 5px;
   border: none;
+  fill: pink;
+}
+
+button > svg > path:hover {
+  fill: red;
+}
+
+.submitButton {
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  background-color: rgb(60 60 60);
+}
+
+.submitButton:hover {
+  box-shadow: 0px 0px 18px 2px rgba(125, 125, 125, 0.75);
+}
+
+input {
+  color: white;
+  margin: 20px;
+  padding: 10px;
+  border: none;
+  width: 400px;
+  background-color: rgb(60 60 60);
 }

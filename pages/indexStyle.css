@@ -4,7 +4,7 @@
 
 * {
   color: white;
-  font-family: ;
+  font-family: sans-serif;
   text-decoration: none;
 }
 
@@ -12,4 +12,23 @@ body {
   text-align: center;
   background-color: rgb(35, 35, 35);
   padding-bottom: 52px;
+}
+
+.commentCard {
+  background-color: rgb(60, 60, 60);
+  border-radius: 10px;
+  padding: 15px;
+  text-align: left;
+  box-shadow: 0px 0px 18px 2px rgba(54, 54, 54, 0.75);
+  width: 700px;
+  margin: 40px auto;
+}
+
+.date {
+  font-size: 0.7rem;
+  text-align: right;
+}
+
+.comment {
+  text-align: center;
 }

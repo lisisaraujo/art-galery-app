@@ -6,7 +6,7 @@ import ArtPieces from "./pieces";
 import Layout from "../Components/Layout";
 import { useImmerLocalStorageState } from "./useImmerLocalStorageState";
 import './indexStyle.css'
-// ...
+
 
 export default function App({ Component, pageProps }) {
 
@@ -45,15 +45,14 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
+
       <GlobalStyle />
       <Component
         {...pageProps}
         pieces={pieces}
         onToggleFavorite={handleToggleFavorite}
         artPiecesInfo={artPiecesInfo}
-
         updateArtPiecesInfo={updateArtPiecesInfo}
-
       />
       <Layout />
     </>

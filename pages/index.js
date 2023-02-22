@@ -19,11 +19,13 @@ export default function HomePage({ onToggleFavorite, pieces }) {
         name={randomPiece.name}
         artist={randomPiece.artist}
         imageSource={randomPiece.imageSource}
-      />
-      <FavoriteButton
         slug={randomPiece.slug}
         onToggleFavorite={onToggleFavorite}
       />
+      {/* <FavoriteButton
+        slug={randomPiece.slug}
+        onToggleFavorite={onToggleFavorite}
+      /> */}
     </>
   );
 }

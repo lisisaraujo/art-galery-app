@@ -31,6 +31,9 @@ export default function ShowPage({ pieces, artPiecesInfo, updateArtPiecesInfo, o
         currentPiece.comments = [commentAndDate, ...currentPiece.comments];
       }
     })
+    event.target.reset()
+    const input = document.getElementById('comment')
+    input.focus()
   }
 
 
@@ -75,9 +78,9 @@ export default function ShowPage({ pieces, artPiecesInfo, updateArtPiecesInfo, o
       {currentInfo &&
         currentInfo.comments.map((comment, index) => {
           return (
-            <div key={index}>
-              <p>{comment.comment}</p>
-              <p>{comment.date}</p>
+            <div className='commentCard' key={index}>
+              <p className='date'>{comment.date}</p>
+              <p className='comment'>{comment.comment}</p>
             </div>
           );
         })}

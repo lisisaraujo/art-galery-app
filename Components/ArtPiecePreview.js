@@ -17,8 +17,8 @@ export default function ArtPiecePreview({
           <Image
             src={imageSource}
             alt="image of the day"
-            width={400}
-            height={400}
+            width={600}
+            height={600}
           />
           <p>
             &quot;{name}&quot; by {artist}
