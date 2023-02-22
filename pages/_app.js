@@ -5,7 +5,6 @@ import { useImmer } from "use-immer";
 import ArtPieces from "./pieces";
 import Layout from "../Components/Layout";
 
-
 export default function App({ Component, pageProps }) {
   const [artPiecesInfo, updateArtPiecesInfo] = useImmer([]);
 
