@@ -4,13 +4,12 @@
 
 * {
   color: white;
-  font-family: sans-serif;
+  font-family: ;
   text-decoration: none;
 }
 
 body {
   text-align: center;
   background-color: rgb(35, 35, 35);
-  padding: 52px 0;
-  max-width: 600px;
+  padding-bottom: 52px;
 }
