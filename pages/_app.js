@@ -29,17 +29,19 @@ export default function App({ Component, pageProps }) {
       console.log(draft);
       const artPiece = draft.find((piece) => piece.slug === slug);
       if (!artPiece) {
+
         draft.push({
           slug,
           isFavorite: true,
+          comments: [],
         });
+
       } else {
         artPiece.isFavorite = !artPiece.isFavorite;
       }
     });
   }
 
-  console.log("++++++++++", artPiecesInfo);
   return (
     <>
       <GlobalStyle />
@@ -47,6 +49,8 @@ export default function App({ Component, pageProps }) {
         {...pageProps}
         pieces={pieces}
         onToggleFavorite={handleToggleFavorite}
+        artPiecesInfo={artPiecesInfo}
+        updateArtPiecesInfo={updateArtPiecesInfo}
       />
       <Layout />
     </>
