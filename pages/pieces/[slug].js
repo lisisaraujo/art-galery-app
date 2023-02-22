@@ -19,7 +19,6 @@ export default function ShowPage({ pieces, artPiecesInfo, updateArtPiecesInfo, o
     updateArtPiecesInfo(draft => {
       let currentPiece = draft.defaultValue.find(piece => piece.slug === slug)
       if (!currentPiece) {
-
         draft.push(
           {
             slug,
@@ -36,11 +35,9 @@ export default function ShowPage({ pieces, artPiecesInfo, updateArtPiecesInfo, o
     input.focus()
   }
 
-
   const currentInfo = artPiecesInfo.defaultValue.find(piece => {
     return (piece.slug === slug)
   })
-
 
   return (
     <Container>

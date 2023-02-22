@@ -3,7 +3,7 @@ nav {
   bottom: 0;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 15px;
   background-color: #393939;
   height: 52px;
