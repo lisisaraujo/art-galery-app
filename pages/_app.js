@@ -27,6 +27,7 @@ export default function App({ Component, pageProps }) {
           {
             slug,
             isFavorite: true,
+            comments: [],
           },
         ];
       } else {
@@ -34,7 +35,6 @@ export default function App({ Component, pageProps }) {
       }
     });
   }
-  console.log("++++++++++", artPiecesInfo);
   return (
     <>
       <GlobalStyle />
@@ -42,6 +42,8 @@ export default function App({ Component, pageProps }) {
         {...pageProps}
         pieces={pieces}
         onToggleFavorite={handleToggleFavorite}
+        artPiecesInfo={artPiecesInfo}
+        updateArtPiecesInfo={updateArtPiecesInfo}
       />
       <Layout />
     </>
