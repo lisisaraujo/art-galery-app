@@ -1,3 +1,5 @@
+import Heart from "../assets/heart.svg";
+
 export default function FavoriteButton({ onToggleFavorite, slug }) {
   return (
     <button
@@ -6,7 +8,7 @@ export default function FavoriteButton({ onToggleFavorite, slug }) {
         onToggleFavorite(slug);
       }}
     >
-      Favorite
+      <Heart width={50} height={50} />
     </button>
   );
 }
