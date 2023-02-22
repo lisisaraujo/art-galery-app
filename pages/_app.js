@@ -9,11 +9,11 @@ import { useImmerLocalStorageState } from "./useImmerLocalStorageState";
 // ...
 
 export default function App({ Component, pageProps }) {
+
   const [artPiecesInfo, updateArtPiecesInfo] = useImmerLocalStorageState(
     "artPiecesInfo",
     { defaultValue: [] }
   );
-  // const [artPiecesInfo, updateArtPiecesInfo] = useImmer([]);
 
   const URL = "https://example-apis.vercel.app/api/art";
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
@@ -30,14 +30,15 @@ export default function App({ Component, pageProps }) {
       const artPiece = draft.find((piece) => piece.slug === slug);
       if (!artPiece) {
 
-        draft.push({
+        draft.push({          
+        comments: [],
           slug,
           isFavorite: true,
-          comments: [],
         });
 
       } else {
         artPiece.isFavorite = !artPiece.isFavorite;
+        // return draft;
       }
     });
   }
@@ -50,7 +51,9 @@ export default function App({ Component, pageProps }) {
         pieces={pieces}
         onToggleFavorite={handleToggleFavorite}
         artPiecesInfo={artPiecesInfo}
+
         updateArtPiecesInfo={updateArtPiecesInfo}
+
       />
       <Layout />
     </>
