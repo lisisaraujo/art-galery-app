@@ -5,8 +5,10 @@ export default function FavoriteArtPieces({
   onToggleFavorite,
   artPiecesInfo,
 }) {
+
+  console.log(artPiecesInfo)
   const favorites = pieces.filter((piece) => {
-    return artPiecesInfo.find(
+    return artPiecesInfo.defaultValue.find(
       (info) => info.slug === piece.slug && info.isFavorite
     );
   });

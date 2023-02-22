@@ -26,12 +26,12 @@ export default function App({ Component, pageProps }) {
 
   function handleToggleFavorite(slug) {
     updateArtPiecesInfo((draft) => {
-      console.log(draft);
-      const artPiece = draft.find((piece) => piece.slug === slug);
+      console.log('this is the draft', draft);
+      const artPiece = draft.defaultValue.find((piece) => piece.slug === slug);
       if (!artPiece) {
 
-        draft.push({          
-        comments: [],
+        draft.defaultValue.push({
+          comments: [],
           slug,
           isFavorite: true,
         });
