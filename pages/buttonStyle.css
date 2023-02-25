@@ -1,10 +1,21 @@
 .favButton {
+  position: absolute;
+  top: 5%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  cursor: pointer;
+
   background-color: transparent;
   font-size: 1rem;
   margin: 20px;
   border-radius: 5px;
   border: none;
   fill: pink;
+}
+
+.filled {
+  fill: red;
 }
 
 button > svg > path:hover {
@@ -29,4 +40,13 @@ input {
   border: none;
   width: 400px;
   background-color: rgb(60 60 60);
+}
+.return-button {
+  align-self: self-start;
+  margin: 5px 20px;
+  background-color: transparent;
+  font-size: 2.5rem;
+
+  border: none;
+  color: white;
 }

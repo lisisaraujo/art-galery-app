@@ -5,11 +5,9 @@ import { useImmer } from "use-immer";
 import ArtPieces from "./pieces";
 import Layout from "../Components/Layout";
 import { useImmerLocalStorageState } from "./useImmerLocalStorageState";
-import './indexStyle.css'
-
+import "./indexStyle.css";
 
 export default function App({ Component, pageProps }) {
-
   const [artPiecesInfo, updateArtPiecesInfo] = useImmerLocalStorageState(
     "artPiecesInfo",
     { defaultValue: [] }
@@ -26,16 +24,14 @@ export default function App({ Component, pageProps }) {
 
   function handleToggleFavorite(slug) {
     updateArtPiecesInfo((draft) => {
-      console.log('this is the draft', draft);
+      console.log("this is the draft", draft);
       const artPiece = draft.defaultValue.find((piece) => piece.slug === slug);
       if (!artPiece) {
-
         draft.defaultValue.push({
           comments: [],
           slug,
           isFavorite: true,
         });
-
       } else {
         artPiece.isFavorite = !artPiece.isFavorite;
         // return draft;
@@ -45,7 +41,6 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
-
       <GlobalStyle />
       <Component
         {...pageProps}
