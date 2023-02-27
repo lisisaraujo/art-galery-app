@@ -28,7 +28,7 @@ export default function ShowPage({
         (piece) => piece.slug === slug
       );
       if (!currentPiece) {
-        draft.push({
+        draft.defaultValue.push({
           slug,
           isFavorite: false,
           comments: [commentAndDate],
@@ -50,7 +50,6 @@ export default function ShowPage({
     <Container>
       <ReturnButton />
       <ImageContainer>
-        <FavoriteButton slug={slug} onToggleFavorite={onToggleFavorite} />
         <Image
           src={imageSource}
           alt="image of the day"
@@ -76,7 +75,7 @@ export default function ShowPage({
         <p>Genre: {genre}</p>
         <p>Year created: {year}</p>
       </section>
-
+      <FavoriteButton slug={slug} onToggleFavorite={onToggleFavorite} />
       <CommentForm onSubmitComment={handleSubmitComment} />
       {currentInfo &&
         currentInfo.comments.map((comment, index) => {

@@ -1,10 +1,7 @@
 import Heart from "../assets/heart.svg";
 
-export default function FavoriteButton({
-  artPiecesInfo,
-  onToggleFavorite,
-  slug,
-}) {
+export default function FavoriteButton({ onToggleFavorite, slug, isFavorite }) {
+  isFavorite ? (className = "favButton") : (className = "favButton filled");
   return (
     <button
       className="favButton"

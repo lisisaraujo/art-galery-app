@@ -12,7 +12,11 @@ export default function ArtPiecePreview({
 }) {
   return (
     <div className="card">
-      <FavoriteButton slug={slug} onToggleFavorite={onToggleFavorite} />
+      <FavoriteButton
+        slug={slug}
+        onToggleFavorite={onToggleFavorite}
+        isFavorite={false}
+      />
       <Link href={`pieces/${slug}`}>
         <div className="art-list-item">
           <Image
