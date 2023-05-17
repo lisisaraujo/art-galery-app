@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 import FavoriteButton from "./FavoriteButton";
 
@@ -15,7 +16,7 @@ export default function ArtPiecePreview({
       <FavoriteButton
         slug={slug}
         onToggleFavorite={onToggleFavorite}
-        isFavorite={false}
+        // isFavorite={false}
       />
       <Link href={`pieces/${slug}`}>
         <div className="art-list-item">

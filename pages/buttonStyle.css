@@ -11,10 +11,22 @@
   margin: 20px;
   border-radius: 5px;
   border: none;
-  fill: pink;
+  fill: rgb(35, 35, 35);
 }
 
 .filled {
+  position: absolute;
+  top: 5%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  cursor: pointer;
+
+  background-color: transparent;
+  font-size: 1rem;
+  margin: 20px;
+  border-radius: 5px;
+  border: none;
   fill: red;
 }
 

@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import FavoriteButton from "../Components/FavoriteButton";
 import Spotlight from "../Components/Spotlight";
 
-
 export default function HomePage({ onToggleFavorite, pieces }) {
   const [randomPiece, setRandomPiece] = useState({});
 
@@ -11,7 +10,7 @@ export default function HomePage({ onToggleFavorite, pieces }) {
       setRandomPiece(pieces[Math.floor(Math.random() * pieces.length)]);
     }
     randomArtwork(pieces);
-  }, []);
+  }, [pieces]);
 
   return (
     <>

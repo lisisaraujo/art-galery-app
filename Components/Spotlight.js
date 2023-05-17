@@ -8,7 +8,7 @@ export default function Spotlight({
   slug,
   onToggleFavorite,
 }) {
-  console.log(imageSource);
+  console.log("IMG SOURCE", imageSource);
   return (
     <>
       <h1>Piece of the Day</h1>
