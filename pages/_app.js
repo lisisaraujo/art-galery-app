@@ -26,6 +26,7 @@ export default function App({ Component, pageProps }) {
   function handleToggleFavorite(slug) {
     updateArtPiecesInfo((draft) => {
       console.log("this is the draft", draft);
+      console.log("this is the draft", draft);
       const artPiece = draft.defaultValue.find((piece) => piece.slug === slug);
       if (!artPiece) {
         draft.defaultValue.push({
