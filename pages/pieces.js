@@ -2,10 +2,10 @@ import ArtPiecePreview from "../Components/ArtPiecePreview";
 
 export default function ArtPieces({ pieces, onToggleFavorite }) {
   // const piecesArr = pieces.map((piece) => piece);
-  console.log("peices array", pieces);
+  // console.log("pieces array", pieces);
 
   return (
-    <div className="centeredcontant">
+    <div className="centered-content">
       <h1>Pieces of Art</h1>
 
       {pieces.map((piece) => {

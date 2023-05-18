@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useImmer } from "use-immer";
 import ArtPieces from "./pieces";
 import Layout from "../Components/Layout";
-import { useImmerLocalStorageState } from "./useImmerLocalStorageState/useImmerLocalStorageState";
+import useImmerLocalStorageState from "./useImmerLocalStorageState";
 import "./indexStyle.css";
 
 export default function App({ Component, pageProps }) {
@@ -13,6 +13,7 @@ export default function App({ Component, pageProps }) {
     { defaultValue: [] }
   );
 
+  const [favorite, setFavorite] = useState(false);
   const URL = "https://example-apis.vercel.app/api/art";
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
   const { data, error, isLoading } = useSWR(URL, fetcher);
@@ -24,6 +25,7 @@ export default function App({ Component, pageProps }) {
 
   function handleToggleFavorite(slug) {
     updateArtPiecesInfo((draft) => {
+      console.log("this is the draft", draft);
       console.log("this is the draft", draft);
       const artPiece = draft.defaultValue.find((piece) => piece.slug === slug);
       if (!artPiece) {

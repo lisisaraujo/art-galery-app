@@ -1,9 +1,10 @@
 import Heart from "../assets/heart.svg";
+import ArtPiecePreview from "./ArtPiecePreview";
 
-export default function FavoriteButton({ onToggleFavorite, slug }) {
+export default function FavoriteButton({ onToggleFavorite, slug, isFavorite }) {
   return (
     <button
-      className="favButton"
+      className={isFavorite ? "filled" : "favButton"}
       type="button"
       onClick={() => {
         onToggleFavorite(slug);
